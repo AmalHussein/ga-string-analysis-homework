@@ -1,65 +1,26 @@
 class String 
 
 	def word_count
-		self.count
+		string = self.split(" ").count
 	end
 
-	def self.unique_words
+	def unique_words
+		string = self.split(" ").uniq
 	end
 
 	def unique_word_count
+		string = self.split(" ").uniq.count 
 	end 
 
 	def word_frequencies
+		frequencies = {} 
+	sting.each do |word|
+	frequencies[word.to_sym] ||= 0
+	frequencies[word.to_sym] += 1	
+		return frequencies
+		end
+
 	end 
 
 end 
-
-
-
-
-
-
-
-# class Foo
-#   def self.bar
-#     puts 'class method'
-#   end
-# end
-
-# Foo.bar # "class method"
-
-# # Way 2
-# class Foo
-#   class << self
-#     def bar
-#       puts 'class method'
-#     end
-#   end
-# end
-
-# Foo.bar # "class method"
-
-# # Way 3
-# class Foo; end
-# def Foo.bar
-#   puts 'class method'
-# end
-
-
-# word_count
-
-# Returns the number of words in a string.
-
-# unique_words
-
-# Returns an array of unique words present in the string.
-
-# unique_word_count
-
-# Returns the number of unique words present in the string.
-
-# word_frequencies
-
-# Returns a hash of the unique words and their frequencies present in the string.
 
