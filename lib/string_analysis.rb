@@ -13,14 +13,14 @@ class String
 	end 
 
 	def word_frequencies
+	string = self.split(" ")
 		frequencies = {} 
-	sting.each do |word|
+	string.each do |word|
 	frequencies[word.to_sym] ||= 0
 	frequencies[word.to_sym] += 1	
-		return frequencies
 		end
+	return frequencies
 
-	end 
-
+	end
 end 
 
